@@ -6,26 +6,55 @@ const User = document.getElementById('user-score');
 const Comp = document.getElementById('comp-score');
 const result = document.querySelector('#msg');
 
+const resetBtn = document.createElement('button');
+const text = document.createTextNode('Reset Game');
+resetBtn.appendChild(text);
+
+document.body.appendChild(resetBtn);
+
+resetBtn.setAttribute('id','msg')
+resetBtn.setAttribute('style','margin-top: 5rem')
+
 const choiceArr = ["rock", "paper", "scissors"];
+
+const resetGame = () => {
+  userScore = 0;
+  compScore = 0;
+  User.innerText = userScore;
+  Comp.innerText = compScore;
+  result.innerText = `Play You Move`
+  result.style.backgroundColor = "#081b31"
+}
+
+resetBtn.addEventListener('click', (e) => {
+  resetGame()
+})
 
 const drawGame = () => {
   result.innerText = `Game Draw`;
+  result.style.backgroundColor = "blue"
 }
 
-const msg = (message) => {
+const msg = (message,color) => {
   User.innerText = userScore;
   Comp.innerText = compScore;
   result.innerText = message;
+  if(color){
+    result.style.backgroundColor = "green"
+  }
+  else{
+    result.style.backgroundColor = "red"
+  }
 }
 
 const showWinner = (userWin, userChoice, compChoice) => {
   if(userWin){
     userScore++;
-    msg(`You Won! Your ${userChoice} beats ${compChoice}`)
+    msg(`You Won! Your ${userChoice} beats ${compChoice}`,true)
   }
   else {
     compScore++;
-    msg(`You Loose! Play Again`)
+    msg(`You Loose! Play Again`,false)
   }
 }
 
