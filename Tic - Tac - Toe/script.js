@@ -63,6 +63,7 @@ const gameDraw = ()=>{
 
 const checkWinner = () =>{
     counter++;
+    let draw  = true;
     for(let pattern of winPatterns){
         let pos1 = boxes[pattern[0]].innerText 
         let pos2 = boxes[pattern[1]].innerText 
@@ -70,10 +71,11 @@ const checkWinner = () =>{
         if(pos1 != "" && pos2 != "" && pos3 != ""){
             if(pos1 === pos2 && pos2 === pos3){
                 showWinner(pos1);
+                draw = false;
             }
         } 
     }
-    if(counter === 9){
+    if(counter === 9 && draw){
         gameDraw();
     }
 };
