@@ -68,6 +68,7 @@ function displayMessage(message) {
 function endGame() {
   userInput.value = '';
   userInput.setAttribute('disabled', '');
+  // ! classList is used to add class or remove class from any element
   p.classList.add('button');
   p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
   startOver.appendChild(p);

@@ -43,6 +43,8 @@ async function updateExchangeRate(){
         amtVal = 1;
     }
 
+    //! important to take care of try and catch block
+
     const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
 
     try{
