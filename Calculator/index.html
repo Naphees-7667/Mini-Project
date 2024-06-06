@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display"></div>
+        <div class="buttons">
+            <button class="btn" id="clear" onclick="display.innerText = ''">AC</button>
+            <button class="btn" id="delete" onclick="display.innerText = display.innerText.slice(0,-1)">DEL</button>
+            <button class="btn" id="percent" onclick="display.innerText += '%'">%</button>
+            <button class="btn operator" id="divide" onclick="display.innerText += '/'">÷</button>
+            <button class="btn" id="seven" onclick="display.innerText += 7">7</button>
+            <button class="btn" id="eight" onclick="display.innerText += 8">8</button>
+            <button class="btn" id="nine" onclick="display.innerText += 9">9</button>
+            <button class="btn operator" id="multiply" onclick="display.innerText += '*'">×</button>
+            <button class="btn" id="four" onclick="display.innerText += 4">4</button>
+            <button class="btn" id="five" onclick="display.innerText += 5">5</button>
+            <button class="btn" id="six" onclick="display.innerText += 6">6</button>
+            <button class="btn operator" id="subtract" onclick="display.innerText += '-'">−</button>
+            <button class="btn" id="one" onclick="display.innerText += 1">1</button>
+            <button class="btn" id="two" onclick="display.innerText += 2">2</button>
+            <button class="btn" id="three" onclick="display.innerText += 3">3</button>
+            <button class="btn operator" id="add" onclick="display.innerText += '+'">+</button>
+            <button class="btn" id="doubleZero" onclick="display.innerText += '00'">00</button>
+            <button class="btn" id="zero" onclick="display.innerText += 0 ">0</button>
+            <button class="btn" id="decimal" onclick="display.innerText += '.'">.</button>
+            <button class="btn operator" id="equals" onclick="display.innerText = eval(display.innerText)">=</button>
+        </div>
+    </div>
+</body>
+</html>
