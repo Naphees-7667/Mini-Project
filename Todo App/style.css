@@ -1,0 +1,9 @@
+.singleTodo{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.checked{
+    text-decoration: line-through;
+}
