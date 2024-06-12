@@ -37,5 +37,4 @@ btn.addEventListener('click' , (evt) => {
     const value = todoInput.value;
 
     addTodo(value)
-
 })
