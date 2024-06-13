@@ -43,6 +43,11 @@ btn.addEventListener('click' , (evt) => {
 
     const value = todoInput.value;
 
+    if(value == ""){
+        alert("Task is empty.......")
+        return
+    }
+
     data.push(value);
 
     localStorage.setItem ("allTodo",JSON.stringify(data))

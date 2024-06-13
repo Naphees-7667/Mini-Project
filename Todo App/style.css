@@ -1,3 +1,10 @@
+*{
+    color: #d30707;
+}
+
+body{
+    background-color: black;
+}
 .singleTodo{
     display: flex;
     align-items: center;
