@@ -4,6 +4,13 @@ const btn = document.querySelector("#addBtn")
 
 const todoInput = document.querySelector("#todoInput")
 
+let data = JSON.parse(localStorage.getItem("allTodo")) || []
+
+let displayTodo = () => {
+    data.map( (element) => {
+        addTodo(element);
+    })
+}
 
 const addTodo = (value) => {
 
@@ -36,5 +43,12 @@ btn.addEventListener('click' , (evt) => {
 
     const value = todoInput.value;
 
+    data.push(value);
+
+    localStorage.setItem ("allTodo",JSON.stringify(data))
+
     addTodo(value)
+
 })
+
+displayTodo();
